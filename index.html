@@ -24,7 +24,6 @@
             width: 100%;
         }
 
-        /* Изменено: Контейнер для изображения */
         .image-container {
             position: absolute;
             top: 0;
@@ -34,14 +33,11 @@
             overflow: hidden;
         }
 
-        /* Изменено: Стили для изображения */
         .image-container img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        /* Удалены: Стили для видео */
-        /* .video-container video { ... } */
 
         .container {
             display: flex;
@@ -114,6 +110,9 @@
             border-radius: 60px;
             transition: transform 0.3s, box-shadow 0.3s;
             animation: pulse 1.5s infinite;
+            position: relative; /* Добавлено для псевдоэлемента */
+            overflow: hidden; /* Добавлено для скрытия части градиента */
+            z-index: 1; /* Для корректного отображения псевдоэлемента */
         }
 
         @keyframes pulse {
@@ -137,8 +136,29 @@
             margin-right: 10px;
         }
 
+        /* Обновлено: Стили для неоновой переливающейся кнопки */
         .onlyfans {
-            background: #ff2d55; /* Ярко-красный цвет */
+            background: linear-gradient(45deg, #ff00f7, #00aff0, #ff00f7); /* Исходный градиент */
+            background-size: 200% 100%; /* Увеличенный размер для анимации */
+            animation: neon-gradient 3s linear infinite, pulse 1.5s infinite; /* Анимация градиента и пульсации */
+            border: 2px solid transparent; /* Добавлена прозрачная граница для неонового эффекта */
+            box-shadow: 0 0 10px rgba(255, 0, 247, 0.7); /* Исходная неоновая тень */
+        }
+
+        /* Анимация для переливающегося градиента */
+        @keyframes neon-gradient {
+            0% {
+                background-position: 0% 50%;
+                box-shadow: 0 0 10px rgba(255, 0, 247, 0.7); /* Розовый неон */
+            }
+            50% {
+                background-position: 100% 50%;
+                box-shadow: 0 0 10px rgba(0, 175, 240, 0.7); /* Голубой неон */
+            }
+            100% {
+                background-position: 0% 50%;
+                box-shadow: 0 0 10px rgba(255, 0, 247, 0.7); /* Возвращение к розовому */
+            }
         }
 
         /* Медиазапросы для адаптивности */
@@ -154,7 +174,6 @@
                 padding: 15px;
             }
 
-            /* Изменено: Стили для адаптивности изображения */
             .image-container img {
                 object-fit: cover;
             }
@@ -172,7 +191,6 @@
                 padding: 12px;
             }
 
-            /* Изменено: Стили для адаптивности изображения */
             .image-container img {
                 object-fit: cover;
             }
@@ -190,7 +208,7 @@
         <div class="neon-text">Jussi</div>
         <a href="https://sisuny.top/click?o=2&a=3126" class="btn onlyfans">
             <i class="fa-brands fa-onlyfans" style="font-size: 30px; margin-right: 10px;"></i>
-            Hot🌶
+            Hot Content🌶
         </a>
     </div>
 </body>
