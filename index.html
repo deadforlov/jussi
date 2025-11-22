@@ -68,33 +68,17 @@
         }
 
         @keyframes neon-effect {
-            0% {
-                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #00aff0, 0 0 20px #00aff0, 0 0 25px #00aff0;
-            }
-            25% {
-                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00f7, 0 0 20px #ff00f7, 0 0 25px #ff00f7;
-            }
-            50% {
-                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00f7, 0 0 20px #ff00f7, 0 0 25px #ff00f7;
-            }
-            75% {
-                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00f7, 0 0 20px #ff00f7, 0 0 25px #ff00f7;
-            }
-            100% {
-                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #00aff0, 0 0 20px #00aff0, 0 0 25px #00aff0;
-            }
+            0% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #00aff0, 0 0 20px #00aff0, 0 0 25px #00aff0; }
+            25% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00f7, 0 0 20px #ff00f7, 0 0 25px #ff00f7; }
+            50% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00f7, 0 0 20px #ff00f7, 0 0 25px #ff00f7; }
+            75% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00f7, 0 0 20px #ff00f7, 0 0 25px #ff00f7; }
+            100% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #00aff0, 0 0 20px #00aff0, 0 0 25px #00aff0; }
         }
 
         @keyframes pulse-text {
-            0% {
-                transform: translateX(-50%) scale(1);
-            }
-            50% {
-                transform: translateX(-50%) scale(1.05);
-            }
-            100% {
-                transform: translateX(-50%) scale(1);
-            }
+            0% { transform: translateX(-50%) scale(1); }
+            50% { transform: translateX(-50%) scale(1.05); }
+            100% { transform: translateX(-50%) scale(1); }
         }
 
         .btn {
@@ -110,21 +94,16 @@
             border-radius: 60px;
             transition: transform 0.3s, box-shadow 0.3s;
             animation: pulse 1.5s infinite;
-            position: relative; /* Добавлено для псевдоэлемента */
-            overflow: hidden; /* Добавлено для скрытия части градиента */
-            z-index: 1; /* Для корректного отображения псевдоэлемента */
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            border: 2px solid transparent;
         }
 
         @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
-            100% {
-                transform: scale(1);
-            }
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
 
         .btn:hover {
@@ -136,64 +115,45 @@
             margin-right: 10px;
         }
 
-        /* Обновлено: Стили для неоновой переливающейся кнопки */
+        /* Кнопка OnlyFans */
         .onlyfans {
-            background: linear-gradient(45deg, #ff00f7, #00aff0, #ff00f7); /* Исходный градиент */
-            background-size: 200% 100%; /* Увеличенный размер для анимации */
-            animation: neon-gradient 3s linear infinite, pulse 1.5s infinite; /* Анимация градиента и пульсации */
-            border: 2px solid transparent; /* Добавлена прозрачная граница для неонового эффекта */
-            box-shadow: 0 0 10px rgba(255, 0, 247, 0.7); /* Исходная неоновая тень */
+            background: linear-gradient(45deg, #ff00f7, #00aff0, #ff00f7);
+            background-size: 200% 100%;
+            animation: neon-gradient 3s linear infinite, pulse 1.5s infinite;
+            box-shadow: 0 0 10px rgba(255, 0, 247, 0.7);
         }
 
-        /* Анимация для переливающегося градиента */
         @keyframes neon-gradient {
-            0% {
-                background-position: 0% 50%;
-                box-shadow: 0 0 10px rgba(255, 0, 247, 0.7); /* Розовый неон */
-            }
-            50% {
-                background-position: 100% 50%;
-                box-shadow: 0 0 10px rgba(0, 175, 240, 0.7); /* Голубой неон */
-            }
-            100% {
-                background-position: 0% 50%;
-                box-shadow: 0 0 10px rgba(255, 0, 247, 0.7); /* Возвращение к розовому */
-            }
+            0% { background-position: 0% 50%; box-shadow: 0 0 10px rgba(255, 0, 247, 0.7); }
+            50% { background-position: 100% 50%; box-shadow: 0 0 10px rgba(0, 175, 240, 0.7); }
+            100% { background-position: 0% 50%; box-shadow: 0 0 10px rgba(255, 0, 247, 0.7); }
         }
 
-        /* Медиазапросы для адаптивности */
+        /* НОВАЯ Кнопка Instagram */
+        .instagram {
+            /* Градиент в цветах Инстаграма */
+            background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+            background-size: 200% 100%;
+            animation: instagram-gradient 3s linear infinite, pulse 1.5s infinite;
+            box-shadow: 0 0 10px rgba(131, 58, 180, 0.7);
+        }
+
+        /* Анимация градиента для Инстаграма */
+        @keyframes instagram-gradient {
+            0% { background-position: 0% 50%; box-shadow: 0 0 10px rgba(131, 58, 180, 0.7); }
+            50% { background-position: 100% 50%; box-shadow: 0 0 10px rgba(252, 176, 69, 0.7); }
+            100% { background-position: 0% 50%; box-shadow: 0 0 10px rgba(131, 58, 180, 0.7); }
+        }
+
+        /* Медиазапросы */
         @media screen and (max-width: 768px) {
-            .neon-text {
-                font-size: 50px;
-                letter-spacing: 5px;
-            }
-
-            .btn {
-                width: 90%;
-                font-size: 18px;
-                padding: 15px;
-            }
-
-            .image-container img {
-                object-fit: cover;
-            }
+            .neon-text { font-size: 50px; letter-spacing: 5px; }
+            .btn { width: 90%; font-size: 18px; padding: 15px; }
         }
 
         @media screen and (max-width: 480px) {
-            .neon-text {
-                font-size: 40px;
-                letter-spacing: 3px;
-            }
-
-            .btn {
-                width: 90%;
-                font-size: 16px;
-                padding: 12px;
-            }
-
-            .image-container img {
-                object-fit: cover;
-            }
+            .neon-text { font-size: 40px; letter-spacing: 3px; }
+            .btn { width: 90%; font-size: 16px; padding: 12px; }
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
@@ -206,9 +166,15 @@
 
     <div class="container">
         <div class="neon-text">Jussi</div>
+        
         <a href="https://sisuny.top/click?o=2&a=3126" class="btn onlyfans">
             <i class="fa-brands fa-onlyfans" style="font-size: 30px; margin-right: 10px;"></i>
             Hot Content🌶
+        </a>
+
+        <a href="https://instagram.com/jussi.owl" class="btn instagram">
+            <i class="fa-brands fa-instagram" style="font-size: 30px; margin-right: 10px;"></i>
+            Instagram
         </a>
     </div>
 </body>
